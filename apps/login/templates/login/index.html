@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Thank you for registering in the future</h1>
+		<form class="register" action="/register" method="post">
+			{% csrf_token %}
+			<label for="first_name">First Name:</label>
+			<input type="text" name="first_name" value="">
+			<label for="last_name">Last Name:</label>
+			<input type="text" name="last_name" value="">
+			<label for="email">Email:</label>
+			<input type="text" name="email" value="">
+			<label for="password">Password:</label>
+			<input type="text" name="password" value="">
+			<input type="submit" name="ssasf" value="Register here">
+		</form>
+		{% for user in users %}
+		{{user}}
+		{% endfor %}
+	</body>
+</html>
